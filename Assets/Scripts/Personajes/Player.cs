@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
     //Variables Globales
 
     #region GlobalVariables
@@ -38,7 +37,5 @@ public class Player : MonoBehaviour
             pController.LookAt(point);
             //    Debug.DrawLine(ray.origin, point);
         }
-
-
     }
 }
