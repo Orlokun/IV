@@ -81,10 +81,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Personajes\CameraController.cs" />
     <Compile Include="Assets\Scripts\Personajes\Gun.cs" />
     <Compile Include="Assets\Scripts\Personajes\GunController.cs" />
     <Compile Include="Assets\Scripts\Personajes\Player.cs" />
     <Compile Include="Assets\Scripts\Personajes\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Personajes\Projectile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Sprites\Ambiente\Pixel Art Forest\readme.txt" />

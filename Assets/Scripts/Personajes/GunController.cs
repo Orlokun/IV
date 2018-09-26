@@ -7,6 +7,8 @@ public class GunController : MonoBehaviour {
     private Gun currentGun;
     public Gun startingGun;
     public Transform weaponHolder;
+
+
     // Use this for initialization
 	void Start () {
 
@@ -14,9 +16,7 @@ public class GunController : MonoBehaviour {
         {
             EquipGun(startingGun);
         }
-		
 	}
-
 
     public void EquipGun(Gun incomingGun)
     {
@@ -26,5 +26,13 @@ public class GunController : MonoBehaviour {
         }
         currentGun = (Gun)Instantiate(incomingGun, weaponHolder);
         currentGun.transform.parent = weaponHolder;
+    }
+
+    public void Shoot()
+    {
+        if (currentGun != null)
+        {
+            currentGun.Shoot();
+        }
     }
 }
