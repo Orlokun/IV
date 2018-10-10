@@ -88,6 +88,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\LevelManager\GameManager.cs" />
     <Compile Include="Assets\Scripts\LevelManager\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Others\ObjetoDestruible.cs" />
     <Compile Include="Assets\Scripts\Personajes\CameraController.cs" />

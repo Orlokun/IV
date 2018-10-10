@@ -72,30 +72,37 @@ public class Player : MonoBehaviour
 
     private void PlayerShooting()
     {
-        if(Input.GetMouseButton(0))
+        if (PauseMenu.gamePaused)
         {
-            /* HOLA SOY UN COMENTARIO
-             * 
-             * Me da lata usar Switch eso chao <3
-             */
-            if (cbullets > 0)
-            {
-                gController.Shoot();
-            }
 
-            else if(cbullets < 0)
+        }
+        else
+        {
+            if (Input.GetMouseButton(0))
             {
-                cbullets = 0;
-            }
+                /* HOLA SOY UN COMENTARIO
+                 * 
+                 * Me da lata usar Switch eso chao <3
+                 */
+                if (cbullets > 0)
+                {
+                    gController.Shoot();
+                }
 
-            else if(cbullets == 0)
-            {
-                Debug.Log("NO TIENES BALAS :c");
-            }
+                else if (cbullets < 0)
+                {
+                    cbullets = 0;
+                }
 
-            else
-            {
-                Debug.Log("NO TIENES BALAS :c");
+                else if (cbullets == 0)
+                {
+                    Debug.Log("NO TIENES BALAS :c");
+                }
+
+                else
+                {
+                    Debug.Log("NO TIENES BALAS :c");
+                }
             }
         }
     }
