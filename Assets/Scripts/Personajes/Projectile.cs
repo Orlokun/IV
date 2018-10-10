@@ -40,6 +40,7 @@ public class Projectile : MonoBehaviour
                 Destroy(gameObject);
                 break;
             case "Destruible":
+                Destroy(gameObject);
                 break;
             case "Enemigo":
                 /*

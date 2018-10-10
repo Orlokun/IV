@@ -17,7 +17,7 @@ public class Gun : MonoBehaviour {
         switch (Player.weaponType)
         {
             case "Basic Blaster":
-                msBeetwenShoots = 50;
+                msBeetwenShoots = 30;
                 break;
 
             default:
