@@ -17,12 +17,34 @@ public class Player : MonoBehaviour
     PlayerController pController;
     GunController gController;
 
+    //Variables Estaticas, para llamarlas desde otros lados sin tanta cosa :D
+    public static string weaponType;
+    public static int maxHP = 100;
+    public static int cHP = 100;
+    public static int bullets;
+    public static int cbullets;
+    public static int charges;
+
     // Use this for initialization
     void Start()
     {
+        weaponType = "Basic Blaster";
+
         pController = GetComponent<PlayerController>();
         gController = FindObjectOfType<GunController>();
         viewCamera = FindObjectOfType<Camera>();
+
+        switch (weaponType)
+        {
+            case "Basic Blaster":
+                bullets = 30;
+                cbullets = bullets;
+                charges = 4; // 4 cargadores
+                break;
+
+            default:
+                break;
+        }
     }
 
     // Update is called once per frame
@@ -52,7 +74,29 @@ public class Player : MonoBehaviour
     {
         if(Input.GetMouseButton(0))
         {
-            gController.Shoot();
+            /* HOLA SOY UN COMENTARIO
+             * 
+             * Me da lata usar Switch eso chao <3
+             */
+            if (cbullets > 0)
+            {
+                gController.Shoot();
+            }
+
+            else if(cbullets < 0)
+            {
+                cbullets = 0;
+            }
+
+            else if(cbullets == 0)
+            {
+                Debug.Log("NO TIENES BALAS :c");
+            }
+
+            else
+            {
+                Debug.Log("NO TIENES BALAS :c");
+            }
         }
     }
 }
