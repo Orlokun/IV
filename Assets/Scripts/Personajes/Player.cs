@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        weaponType = "Basic Blaster";
+        weaponType = "Minigun";
 
         pController = GetComponent<PlayerController>();
         gController = FindObjectOfType<GunController>();
@@ -41,6 +41,11 @@ public class Player : MonoBehaviour
                 cbullets = bullets;
                 charges = 4; // 4 cargadores
                 break;
+            case "Minigun":
+                bullets = 60;
+                cbullets = bullets;
+                charges = 10; // 4 cargadores
+                break;
 
             default:
                 break;
@@ -52,6 +57,7 @@ public class Player : MonoBehaviour
     {
         PlayerMovement();
         PlayerShooting();
+        PlayerReloading();
     }
 
     private void PlayerMovement()
@@ -78,7 +84,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            if (Input.GetMouseButton(0))
+            if (Input.GetButton("Fire1"))
             {
                 /* HOLA SOY UN COMENTARIO
                  * 
@@ -102,6 +108,46 @@ public class Player : MonoBehaviour
                 else
                 {
                     Debug.Log("NO TIENES BALAS :c");
+                }
+            }
+        }
+    }
+
+    private void PlayerReloading()
+    {
+        if (PauseMenu.gamePaused)
+        {
+
+        }
+        else
+        {
+            if (Input.GetButtonDown("Reload"))
+            {
+                if (cbullets != bullets)
+                {
+                    /* HOLA SOY UN COMENTARIO
+                     * 
+                     * Me da lata usar Switch eso chao <3
+                     */
+                    if (charges > 0)
+                    {
+                        gController.Reload();
+                    }
+
+                    else if (charges < 0)
+                    {
+                        charges = 0;
+                    }
+
+                    else if (charges == 0)
+                    {
+                        Debug.Log("NO TIENES Cargadores :c");
+                    }
+
+                    else
+                    {
+                        Debug.Log("NO TIENES Cargadores :c");
+                    }
                 }
             }
         }

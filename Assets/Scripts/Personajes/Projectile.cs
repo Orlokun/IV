@@ -43,9 +43,7 @@ public class Projectile : MonoBehaviour
                 Destroy(gameObject);
                 break;
             case "Enemigo":
-                /*
-                 * Hago Dano :(
-                 */
+                Destroy(gameObject);
                 break;
         }
     }
