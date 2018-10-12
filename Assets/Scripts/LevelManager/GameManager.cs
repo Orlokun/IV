@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour {
 
     public static void HideCursor()
     {
-        /*Cursor.visible = false;
+        /*Cursor.visible = false; c:
         Cursor.lockState = CursorLockMode.None;*/
     }
 
