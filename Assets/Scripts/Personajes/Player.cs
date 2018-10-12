@@ -10,16 +10,24 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [Header("Sprites")]
+    public Sprite upSprite;
+    public Sprite downSprite;
+    public Sprite leftSprite;
+    public Sprite rightSprite;
+
     //Variables Globales
 
-    Camera viewCamera;
+    [Header("Requisitos")]
     public float moveSpeed;
+    Camera viewCamera;
     PlayerController pController;
     GunController gController;
+    public Transform playerTransform;
 
     //Variables Estaticas, para llamarlas desde otros lados sin tanta cosa :D
     public static string weaponType;
-    public static int maxHP = 100;
+    public static int maxHP = 100; /* Tuve que pasarlos a float porque la wea no se dividia bien */
     public static int cHP = 100;
     public static int bullets;
     public static int cbullets;
@@ -28,11 +36,13 @@ public class Player : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+
         weaponType = "Minigun";
 
         pController = GetComponent<PlayerController>();
         gController = FindObjectOfType<GunController>();
         viewCamera = FindObjectOfType<Camera>();
+
 
         switch (weaponType)
         {
@@ -56,6 +66,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         PlayerMovement();
+        UpdateSprite();
         PlayerShooting();
         PlayerReloading();
     }
@@ -151,5 +162,43 @@ public class Player : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void UpdateSprite()
+    {
+        /*if (Input.GetAxisRaw("Vertical") > 0.01)
+        {
+            GetComponent<SpriteRenderer>().sprite = upSprite;
+        }
+        else if (Input.GetAxisRaw("Vertical") < -0.01)
+        {
+            GetComponent<SpriteRenderer>().sprite = downSprite;
+        }
+        else if (Input.GetAxisRaw("Horizontal") > 0.01)
+        {
+            GetComponent<SpriteRenderer>().sprite = rightSprite;
+        }
+        else if (Input.GetAxisRaw("Horizontal") < -0.01)
+        {
+            GetComponent<SpriteRenderer>().sprite = leftSprite;
+        }
+        */
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "Enemigo":
+                Damage(10);
+                break;
+            default:
+                break;
+        }
+    }
+
+    void Damage(int damage)
+    {
+        cHP = cHP - damage;
     }
 }
