@@ -1,0 +1,384 @@
+fileFormatVersion: 2
+guid: beb66e9217c52354c8a548bbe7b786a4
+timeCreated: 1539180011
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Fuck_Cat_SpriteSheet_v2_0
+    21300002: Fuck_Cat_SpriteSheet_v2_1
+    21300004: Fuck_Cat_SpriteSheet_v2_2
+    21300006: Fuck_Cat_SpriteSheet_v2_3
+    21300008: Fuck_Cat_SpriteSheet_v2_4
+    21300010: Fuck_Cat_SpriteSheet_v2_5
+    21300012: Fuck_Cat_SpriteSheet_v2_6
+    21300014: Fuck_Cat_SpriteSheet_v2_7
+    21300016: Fuck_Cat_SpriteSheet_v2_8
+    21300018: Fuck_Cat_SpriteSheet_v2_9
+    21300020: Fuck_Cat_SpriteSheet_v2_10
+    21300022: Fuck_Cat_SpriteSheet_v2_11
+    21300024: Fuck_Cat_SpriteSheet_v2_12
+    21300026: Fuck_Cat_SpriteSheet_v2_13
+    21300028: Fuck_Cat_SpriteSheet_v2_14
+    21300030: Fuck_Cat_SpriteSheet_v2_15
+    21300032: Fuck_Cat_SpriteSheet_v2_16
+    21300034: FuckCatHUD
+    21300036: HPBAR_HUD
+    21300038: HPBAR_BG_HUD
+    21300040: Fuck_Cat_SpriteSheet_v2_20
+    21300042: Fuck_Cat_SpriteSheet_v2_21
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Fuck_Cat_SpriteSheet_v2_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 306
+        width: 41
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5221118, y: 0.5557893}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fuck_Cat_SpriteSheet_v2_1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 312
+        width: 40
+        height: 33
+      alignment: 9
+      pivot: {x: 0.47280294, y: 0.47802272}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fuck_Cat_SpriteSheet_v2_2
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 312
+        width: 36
+        height: 34
+      alignment: 9
+      pivot: {x: 0.43956205, y: 0.43067482}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fuck_Cat_SpriteSheet_v2_3
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 312
+        width: 37
+        height: 34
+      alignment: 9
+      pivot: {x: 0.5441037, y: 0.4520057}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fuck_Cat_SpriteSheet_v2_4
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 265
+        width: 41
+        height: 39
+      alignment: 9
+      pivot: {x: 0.51576257, y: 0.5441887}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fuck_Cat_SpriteSheet_v2_5
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 271
+        width: 40
+        height: 33
+      alignment: 9
+      pivot: {x: 0.47845823, y: 0.47388896}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fuck_Cat_SpriteSheet_v2_6
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 271
+        width: 36
+        height: 34
+      alignment: 9
+      pivot: {x: 0.45811293, y: 0.46832097}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fuck_Cat_SpriteSheet_v2_7
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 271
+        width: 37
+        height: 34
+      alignment: 9
+      pivot: {x: 0.53493357, y: 0.48099294}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fuck_Cat_SpriteSheet_v2_8
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 225
+        width: 41
+        height: 39
+      alignment: 9
+      pivot: {x: 0.51576257, y: 0.57180667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fuck_Cat_SpriteSheet_v2_9
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 231
+        width: 40
+        height: 33
+      alignment: 9
+      pivot: {x: 0.47845823, y: 0.46736097}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fuck_Cat_SpriteSheet_v2_10
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 231
+        width: 36
+        height: 34
+      alignment: 9
+      pivot: {x: 0.4341774, y: 0.44931343}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fuck_Cat_SpriteSheet_v2_11
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 231
+        width: 35
+        height: 34
+      alignment: 9
+      pivot: {x: 0.54308385, y: 0.43664145}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fuck_Cat_SpriteSheet_v2_12
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 180
+        width: 45
+        height: 40
+      alignment: 9
+      pivot: {x: 0.4589299, y: 0.55197906}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fuck_Cat_SpriteSheet_v2_13
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 187
+        width: 43
+        height: 33
+      alignment: 9
+      pivot: {x: 0.4298637, y: 0.47388896}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fuck_Cat_SpriteSheet_v2_14
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 187
+        width: 40
+        height: 34
+      alignment: 9
+      pivot: {x: 0.4138325, y: 0.46832097}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fuck_Cat_SpriteSheet_v2_15
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 187
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fuck_Cat_SpriteSheet_v2_16
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 168
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FuckCatHUD
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 121
+        width: 54
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: HPBAR_HUD
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 135
+        width: 25
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: HPBAR_BG_HUD
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 127
+        width: 25
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fuck_Cat_SpriteSheet_v2_20
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 165
+        width: 3
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fuck_Cat_SpriteSheet_v2_21
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 155
+        width: 6
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
