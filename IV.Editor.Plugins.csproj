@@ -104,6 +104,12 @@
     <Reference Include="UnityEngine.VR">
       <HintPath>D:/Program Files/Unity/5.4.4/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
     </Reference>
+    <Reference Include="TextMeshPro-5.5-Editor">
+      <HintPath>Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-5.5-Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="TextMeshPro-5.5-Runtime">
+      <HintPath>Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-5.5-Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.Graphs">
       <HintPath>D:/Program Files/Unity/5.4.4/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
     </Reference>
@@ -118,12 +124,6 @@
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
-    </Reference>
-    <Reference Include="TextMeshPro-5.5-Runtime">
-      <HintPath>Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-5.5-Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="TextMeshPro-5.5-Editor">
-      <HintPath>Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-5.5-Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -150,8 +150,8 @@
     <Compile Include="Assets\Standard Assets\Editor\ImageEffects\VignetteAndChromaticAberrationEditor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Sprites\Ambiente\Pixel Art Forest\readme.txt" />
-    <None Include="Assets\Sprites\Cave Platformer Tileset\readme.txt" />
+    <None Include="Assets\Sprites\Mapas\Ambiente\Pixel Art Forest\readme.txt" />
+    <None Include="Assets\Sprites\Mapas\Cave Platformer Tileset\readme.txt" />
     <None Include="Assets\Standard Assets\2D\Pixel Art Forest\readme.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />

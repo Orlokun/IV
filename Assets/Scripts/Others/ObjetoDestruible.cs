@@ -42,6 +42,7 @@ public class ObjetoDestruible : MonoBehaviour {
 
         if(chp == 0)
         {
+            DropManager.Drop(gameObject);
             Destroy(gameObject);
         }
     }

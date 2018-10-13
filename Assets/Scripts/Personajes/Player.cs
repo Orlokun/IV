@@ -69,6 +69,7 @@ public class Player : MonoBehaviour
         UpdateSprite();
         PlayerShooting();
         PlayerReloading();
+        CheckHealthPoints();
     }
 
     private void PlayerMovement()
@@ -136,10 +137,6 @@ public class Player : MonoBehaviour
             {
                 if (cbullets != bullets)
                 {
-                    /* HOLA SOY UN COMENTARIO
-                     * 
-                     * Me da lata usar Switch eso chao <3
-                     */
                     if (charges > 0)
                     {
                         gController.Reload();
@@ -199,6 +196,41 @@ public class Player : MonoBehaviour
 
     void Damage(int damage)
     {
-        cHP = cHP - damage;
+        if(cHP <= 0)
+        {
+            cHP = 0;
+            Die();
+        }
+        else if(cHP < 0)
+        {
+            cHP = 0;
+            Die();
+        }
+        else if (cHP > 0)
+        {
+            cHP = cHP - damage;
+        }
+    }
+
+    void CheckHealthPoints()
+    {
+        if (cHP <= 0)
+        {
+            cHP = 0;
+            Die();
+        }
+        else if (cHP < 0)
+        {
+            cHP = 0;
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        UIManager.ChangeStateGameObject("mainGUI", false);
+        Time.timeScale = 0;
+        PauseMenu.gamePaused = true;
+        UIManager.ChangeStateGameObject("deathGUI", true);
     }
 }

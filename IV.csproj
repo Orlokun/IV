@@ -93,7 +93,9 @@
     <Compile Include="Assets\Scripts\Enemigos\SemiBoss\EmmaWatson.cs" />
     <Compile Include="Assets\Scripts\LevelManager\GameManager.cs" />
     <Compile Include="Assets\Scripts\LevelManager\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\LevelManager\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\Others\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\Others\DropManager.cs" />
     <Compile Include="Assets\Scripts\Others\ObjetoDestruible.cs" />
     <Compile Include="Assets\Scripts\Personajes\CameraController.cs" />
     <Compile Include="Assets\Scripts\Personajes\Gun.cs" />
@@ -104,8 +106,8 @@
     <Compile Include="Assets\Scripts\UIManager\UIManager.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Sprites\Ambiente\Pixel Art Forest\readme.txt" />
-    <None Include="Assets\Sprites\Cave Platformer Tileset\readme.txt" />
+    <None Include="Assets\Sprites\Mapas\Ambiente\Pixel Art Forest\readme.txt" />
+    <None Include="Assets\Sprites\Mapas\Cave Platformer Tileset\readme.txt" />
     <None Include="Assets\Standard Assets\2D\Pixel Art Forest\readme.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />

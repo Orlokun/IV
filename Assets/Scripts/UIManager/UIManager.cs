@@ -20,9 +20,22 @@ public class UIManager : MonoBehaviour
     public AudioSource bgAudio;
     public RawImage bg;
 
+    [Header("Interfaces")]
+
+    public GameObject mainGUI;
+    public GameObject deathGUI;
+
+    #region Interfaces Estaticas :(
+    private static GameObject _mainGUI;
+    private static GameObject _deathGUI;
+    #endregion
+
     // Use this for initialization
     void Start()
     {
+        _mainGUI = mainGUI;
+        _deathGUI = deathGUI;
+
         UpdateHP();
         UpdateBullets();
         if (SceneManager.GetActiveScene().buildIndex == 0)
@@ -96,5 +109,22 @@ public class UIManager : MonoBehaviour
         Application.Quit();
     }
 
+    public static void ChangeStateGameObject(string xGameObject, bool estado)
+    {
+        switch (xGameObject)
+        {
+            case "mainGUI":
+                _mainGUI.SetActive(estado);
+                break;
+
+            case "deathGUI":
+                _deathGUI.SetActive(estado);
+                break;
+
+            default:
+                Debug.Log("CASO INEXISTENTE REVISAR LA WEA QUE PASASTE");
+                break;
+        }
+    }
 
 }
