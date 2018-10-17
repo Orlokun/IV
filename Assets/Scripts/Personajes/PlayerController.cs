@@ -26,15 +26,22 @@ public class PlayerController : MonoBehaviour
 
     public void LookAt(Vector2 point)
     {
-        Vector3 mousePositionVector3 = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
+        if (PauseMenu.gamePaused)
+        {
 
-        mousePositionVector3 = Camera.main.ScreenToWorldPoint(mousePositionVector3);
-        Vector3 targetdir = mousePositionVector3 - transform.position;
-        transform.rotation = Quaternion.LookRotation(Vector3.forward, targetdir);
+        }
+        else
+        {
+            Vector3 mousePositionVector3 = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
 
-        /*Vector2 diff = new Vector2(transform.position.x, transform.position.y) - point;
-        diff.Normalize();
-        float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f, 0f, rot_z + 90);*/
+            mousePositionVector3 = Camera.main.ScreenToWorldPoint(mousePositionVector3);
+            Vector3 targetdir = mousePositionVector3 - transform.position;
+            transform.rotation = Quaternion.LookRotation(Vector3.forward, targetdir);
+
+            /*Vector2 diff = new Vector2(transform.position.x, transform.position.y) - point;
+            diff.Normalize();
+            float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0f, 0f, rot_z + 90);*/
+        }
     }
 }

@@ -35,4 +35,10 @@ public class GunController : MonoBehaviour {
             currentGun.Shoot();
         }
     }
+
+    public void Reload()
+    {
+        if (currentGun != null)
+            currentGun.Reload();
+    }
 }

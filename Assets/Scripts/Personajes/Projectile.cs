@@ -10,6 +10,10 @@ public class Projectile : MonoBehaviour
     public float speed;
     private Vector2 direction;
 
+    public void SetLifeTime(Projectile projectile, float lifeTime)
+    {
+        Destroy(gameObject, lifeTime);
+    }
 
     public void SetSpeed(Vector2 incomingTarget, float incomingSpeed)
     {
@@ -25,5 +29,22 @@ public class Projectile : MonoBehaviour
     {
         Rigidbody2D rigid = gameObject.GetComponent<Rigidbody2D>();
         rigid.velocity = transform.up * 10;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.gameObject.tag.ToString());
+        switch (collision.gameObject.tag)
+        {
+            case "Muralla":
+                Destroy(gameObject);
+                break;
+            case "Destruible":
+                Destroy(gameObject);
+                break;
+            case "Enemigo":
+                Destroy(gameObject);
+                break;
+        }
     }
 }
