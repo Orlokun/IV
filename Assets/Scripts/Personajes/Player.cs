@@ -15,6 +15,9 @@ public class Player : MonoBehaviour
     public Sprite downSprite;
     public Sprite leftSprite;
     public Sprite rightSprite;
+    public Sprite Happy;
+    public Sprite Angry;
+    public Sprite Hitted;
 
     //Variables Globales
 
@@ -49,7 +52,7 @@ public class Player : MonoBehaviour
             case "Basic Blaster":
                 bullets = 30;
                 cbullets = bullets;
-                charges = 4; // 4 cargadores
+                charges = 2; // 4 cargadores
                 break;
             case "Minigun":
                 bullets = 60;
@@ -188,6 +191,22 @@ public class Player : MonoBehaviour
         {
             case "Enemigo":
                 Damage(10);
+                break;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "Ammo":
+                Item.pickUpItem("Ammo", collision.gameObject);
+                break;
+            case "Blaster":
+                Item.pickUpItem("Blaster", collision.gameObject);
+                break;
+            case "Minigun":
+                Item.pickUpItem("Minigun", collision.gameObject);
                 break;
             default:
                 break;

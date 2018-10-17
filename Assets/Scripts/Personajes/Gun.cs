@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Gun : MonoBehaviour {
 
@@ -9,6 +10,7 @@ public class Gun : MonoBehaviour {
     public float msBeetwenShoots = 100;
     public float muzzleVelocity = 35;
     public float speed = 5;
+    public float reloadTime;
 
     float nextShot = 0;
 
@@ -18,9 +20,11 @@ public class Gun : MonoBehaviour {
         {
             case "Basic Blaster":
                 msBeetwenShoots = 30;
+                reloadTime = Time.time + 30 / 100;
                 break;
             case "Minigun":
                 msBeetwenShoots = 10;
+                reloadTime = Time.time + 100 / 100;
                 break;
 
             default:
@@ -47,8 +51,12 @@ public class Gun : MonoBehaviour {
         //AudioManager.BlasterReload(); Minigun, etc
         if (Player.charges > 0)
         {
-            Player.charges = Player.charges - 1;
-            Player.cbullets = Player.bullets;
+            Debug.Log("Recargando");
+                Debug.Log("Mostrando UI");
+                UIManager.ChangeStateGameObject("reloadImage", true);
+                UIManager.GetGameObject("reloadImage").GetComponent<Image>().fillAmount = reloadTime / Time.time;
+                Player.charges = Player.charges - 1;
+                Player.cbullets = Player.bullets;
         }
     }
 }
