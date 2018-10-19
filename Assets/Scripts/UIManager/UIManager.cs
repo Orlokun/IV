@@ -6,8 +6,8 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     public Image hpBar;
-    public TextMeshPro hpIndicator;
-    public TextMeshPro bulletsUI;
+    public TextMeshProUGUI hpIndicator;
+    public TextMeshProUGUI bulletsUI;
 
     [SerializeField] private float hpBarFillAmount;
 
