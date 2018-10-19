@@ -9,7 +9,7 @@ public class UIManager : MonoBehaviour
     public TextMeshPro hpIndicator;
     public TextMeshPro bulletsUI;
 
-    [SerializeField]private float hpBarFillAmount;
+    [SerializeField] private float hpBarFillAmount;
 
     [Header("Menu Principal")]
     public Dropdown dificultad;
@@ -22,10 +22,16 @@ public class UIManager : MonoBehaviour
 
     public GameObject mainGUI;
     public GameObject deathGUI;
+    public GameObject reloadImage;
+
+    [Header("Otros")]
+
+    public GameObject fuckCatFace;
 
     #region Interfaces Estaticas :(
     private static GameObject _mainGUI;
     private static GameObject _deathGUI;
+    private static GameObject _reloadImage;
     #endregion
 
     // Use this for initialization
@@ -33,6 +39,7 @@ public class UIManager : MonoBehaviour
     {
         _mainGUI = mainGUI;
         _deathGUI = deathGUI;
+        _reloadImage = reloadImage;
 
         UpdateHP();
         UpdateBullets();
@@ -72,7 +79,7 @@ public class UIManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate ()
+    void FixedUpdate()
     {
 
         UpdateHP();
@@ -86,7 +93,7 @@ public class UIManager : MonoBehaviour
             hpBar.fillAmount = ((float)Player.cHP / (float)Player.maxHP);
             hpIndicator.text = Player.cHP + "/" + Player.maxHP;
         }
-        
+
     }
 
     public void UpdateBullets()
@@ -98,13 +105,18 @@ public class UIManager : MonoBehaviour
     }
 
     public void BotonJugar()
-    {     
+    {
         SceneManager.LoadScene("PlayerScene");
     }
 
     public void BotonSalir()
     {
         Application.Quit();
+    }
+
+    public static void ChangeImage(GameObject _object, Sprite toImage)
+    {
+        _object.GetComponent<Image>().sprite = toImage;
     }
 
     public static void ChangeStateGameObject(string xGameObject, bool estado)
@@ -118,11 +130,32 @@ public class UIManager : MonoBehaviour
             case "deathGUI":
                 _deathGUI.SetActive(estado);
                 break;
+            case "reloadImage":
+                _reloadImage.SetActive(estado);
+                break;
 
             default:
                 Debug.Log("CASO INEXISTENTE REVISAR LA WEA QUE PASASTE");
                 break;
         }
+    }
+
+    public static GameObject GetGameObject(string _GameObject)
+    {
+        GameObject toReturn = null;
+
+        switch (_GameObject)
+        {
+            case "reloadImage":
+                toReturn = _reloadImage;
+                break;
+
+            default:
+                Debug.Log("CASO INEXISTENTE REVISAR LA WEA QUE PASASTE");
+                break;
+        }
+
+        return toReturn;
     }
 
 }
