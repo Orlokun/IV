@@ -1,15 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
     public Image hpBar;
-    public TextMeshProUGUI hpIndicator;
-    public TextMeshProUGUI bulletsUI;
+    public TextMeshPro hpIndicator;
+    public TextMeshPro bulletsUI;
 
     [SerializeField]private float hpBarFillAmount;
 

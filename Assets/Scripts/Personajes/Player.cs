@@ -1,6 +1,4 @@
 ﻿//Librerías
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 //Requiriendo componente en el GameObject

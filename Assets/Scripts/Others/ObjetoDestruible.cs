@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
 public class ObjetoDestruible : MonoBehaviour {
@@ -9,7 +7,7 @@ public class ObjetoDestruible : MonoBehaviour {
     int chp;
     string drop;
 
-    [SerializeField]TextMeshPro lifeText;
+    [SerializeField] TextMeshPro lifeText;
 
 
 	// Use this for initialization

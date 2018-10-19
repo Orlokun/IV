@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CamiLord : MonoBehaviour
@@ -22,6 +21,7 @@ public class CamiLord : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+
     }
 
     // Update is called once per frame
@@ -53,8 +53,8 @@ public class CamiLord : MonoBehaviour
         if(cHP < 0)
         {
             Destroy(gameObject);
-            
         }
+
         else
         {
             if (!isRed)
