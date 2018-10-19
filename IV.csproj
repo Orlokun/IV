@@ -87,6 +87,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\PatrollingEnemies.cs" />
     <Compile Include="Assets\Scripts\Enemigos\Boss\CamiLord.cs" />
     <Compile Include="Assets\Scripts\Enemigos\SemiBoss\ArduinoUno.cs" />
     <Compile Include="Assets\Scripts\Enemigos\SemiBoss\EmmaWatson.cs" />
