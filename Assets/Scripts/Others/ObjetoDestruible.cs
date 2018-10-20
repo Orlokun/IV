@@ -3,16 +3,21 @@ using TMPro;
 
 public class ObjetoDestruible : MonoBehaviour {
 
-    int hp = 3;
-    int chp;
-    string drop;
+    public int hp;
+    private int chp;
+    public bool shouldDrop;
+    public string drop;
 
     [SerializeField] TextMeshPro lifeText;
-
 
 	// Use this for initialization
 	void Start ()
     {
+        if (hp == 0)
+        {
+            Debug.LogError("El objeto: " + gameObject.name + "Se va a morir altiro");
+        }
+
         chp = hp;
 	}
 	
@@ -40,9 +45,14 @@ public class ObjetoDestruible : MonoBehaviour {
 
         if(chp == 0)
         {
-            DropManager.Drop(gameObject);
-            Destroy(gameObject);
+            ProcessDeath();
         }
+    }
+
+    private void ProcessDeath()
+    {
+        DropManager.Drop(gameObject);
+        Destroy(gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

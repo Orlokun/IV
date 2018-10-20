@@ -7,14 +7,22 @@ using UnityEngine;
 
 public class PatrollingEnemies : MonoBehaviour
 {
+
+    #region GlobalVariables
+
     public float distanceToMove;
-    public int horizontalPatroll;      // 1 significa horizontal, 0 vertical. 
+    public int typeOfPatrolling;      // 1 significa horizontal, 0 vertical. 
     public float speed;
-    public int actualTarget;
+
+    private int actualTarget;
     private Vector3 initPos;            // Posición inicial
-    public Vector3[] movementPositions;
+    private Vector3[] movementPositions;    //Posiciones hacia las que se moverá por default
+
     private Rigidbody2D myRb;
-    private bool upRightDownLeft;
+    private bool upRightDownLeft;       //Sirve para saber si agregar fuerza positiva o negativa al rigidBody
+    private bool canMove;
+
+    #endregion
 
     // Use this for initialization
     void Start()
@@ -23,23 +31,26 @@ public class PatrollingEnemies : MonoBehaviour
         actualTarget = 0;
         myRb = GetComponent<Rigidbody2D>();
         movementPositions = new Vector3[2];
-
+        canMove = true;
         SaveMovementData();
     }
 
     // Update is called once per frame
     void Update()
     {
-        switch (horizontalPatroll)
+        if (canMove)
         {
-            case 0:
-                AddVerticalVelocity();
-                break;
-            case 1:
-                AddHorizontalVelocity();
-                break;
-            default:
-                break;
+            switch (typeOfPatrolling)
+            {
+                case 0:
+                    AddVerticalVelocity();
+                    break;
+                case 1:
+                    AddHorizontalVelocity();
+                    break;
+                default:
+                    break;
+            }
         }
 
 
@@ -63,11 +74,14 @@ public class PatrollingEnemies : MonoBehaviour
 
     }
 
+
+    #region MovementInfo
+
     private void SaveMovementData()
     {
         initPos = gameObject.transform.position;
 
-        switch (horizontalPatroll)
+        switch (typeOfPatrolling)
         {
             case 0:
                 SaveVerticalData();
@@ -111,6 +125,9 @@ public class PatrollingEnemies : MonoBehaviour
         }
     }
 
+    #endregion
+
+    #region AddVelocity
     private void AddVerticalVelocity()
     {
         if (upRightDownLeft)
@@ -135,6 +152,14 @@ public class PatrollingEnemies : MonoBehaviour
         }
     }
 
+
+    private void AddForce(float velocityX, float velocityY)
+    {
+        myRb.velocity = new Vector2(velocityX, velocityY);
+    }
+
+    #endregion
+
     private void ToggleTarget()
     {
         if (actualTarget == 0)
@@ -156,8 +181,61 @@ public class PatrollingEnemies : MonoBehaviour
         }
     }
 
-    private void AddForce(float velocityX, float velocityY)
+    #region Events
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        myRb.velocity = new Vector2(velocityX, velocityY);
+        GameObject incomingObj = collision.gameObject;
+        if (gameObject.tag == null)
+        {
+            return;
+        }
+        else
+        {
+            string incomingTag = incomingObj.tag;
+            switch (incomingTag)
+            {
+                case "Muralla":
+                    ChangeMovement(incomingObj);
+                    break;
+                case "Player":
+                    EvaluatePlayerTakeDamage(incomingObj);
+                    break;
+                case "Projectile":
+                    EvaluateTakeDamage(incomingObj);
+                    break;
+                default:
+                    break;
+
+            }
+        }
     }
+    #endregion
+
+    #region EventUtils
+
+    private void ChangeMovement(GameObject incomingObj)
+    {
+        if (actualTarget != 0)
+        {
+            movementPositions[1] = transform.position;
+        }
+        else
+        {
+            movementPositions[0] = transform.position;
+        }
+
+    }
+
+    private void EvaluatePlayerTakeDamage(GameObject incomingObj)
+    {
+
+    }
+
+    private void EvaluateTakeDamage(GameObject incomingObj)
+    {
+
+    }
+
+    #endregion
 }
