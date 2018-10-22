@@ -14,12 +14,15 @@ public class FieldOfView : MonoBehaviour
     [HideInInspector]
     public List<Transform> visibleTargets = new List<Transform>();      //  Targets a la vista. 
     public float delayTime;                                             //  Framerate de checkeo
+    public float edgeDistanceTreshHold;
 
+
+    private int edgeResolveIterations = 0;
     private float meshResolution = 1;                                        //
     public MeshFilter viewMeshFilter;                                   //  Sistema que grafica los datos acerca de los triángulos que le entregamos. 
     Mesh viewMesh;                                                      //  Mesh vacía. La instanciaremos más adelante. 
+    MeshRenderer viewMeshRenderer;
 
-    public int edgeResolveIterations;
 
 
 
@@ -29,6 +32,10 @@ public class FieldOfView : MonoBehaviour
         viewMesh = new Mesh();
         viewMesh.name = "View Mesh";
         viewMeshFilter.mesh = viewMesh;
+        viewMeshRenderer = GetComponentInChildren<MeshRenderer>();
+        viewMeshRenderer.sortingLayerName = "Light";
+        viewMeshRenderer.sortingOrder = 0;
+
         StartCoroutine(FindTargetsWithDelay(delayTime));
     }
 
@@ -74,7 +81,7 @@ public class FieldOfView : MonoBehaviour
         float stepAngleSize = viewAngle / stepCount;                                        //Cantidad de grados que cubre cada nuevo rayo. 
         List<Vector3> viewPoints = new List<Vector3>();                                     //Listado de Puntos en el espacio donde Chocan o Terminan;
 
-        ViewCastInfo oldViewCastoldVCastInfo = new ViewCastInfo();
+        ViewCastInfo oldViewCast = new ViewCastInfo();
 
         for (int i = 0; i <= stepCount; i++)
         {
@@ -83,9 +90,10 @@ public class FieldOfView : MonoBehaviour
 
             if (i > 0)
             {
-                if (oldViewCastoldVCastInfo.hit != newViewCast.hit)
+                bool edgeDistanceTreshHoldExceeded = Mathf.Abs(oldViewCast.distance - newViewCast.distance) > edgeDistanceTreshHold;
+                if (oldViewCast.hit != newViewCast.hit || (oldViewCast.hit && newViewCast.hit && edgeDistanceTreshHoldExceeded))
                 {
-                    EdgeInfo edge = FindEdge(oldViewCastoldVCastInfo, newViewCast);
+                    EdgeInfo edge = FindEdge(oldViewCast, newViewCast);
                     if (edge.pointA != Vector3.zero)
                     {
                         viewPoints.Add(edge.pointA);
@@ -96,7 +104,8 @@ public class FieldOfView : MonoBehaviour
                     }
                 }
             }
-            oldViewCastoldVCastInfo = newViewCast;
+
+            oldViewCast = newViewCast;
             viewPoints.Add(newViewCast.point);                                              //Agrego a una lista la información de cada uno de los rayos. 
         }
 
@@ -122,7 +131,7 @@ public class FieldOfView : MonoBehaviour
         viewMesh.RecalculateNormals();
     }
 
-    EdgeInfo FindEdge(ViewCastInfo minViewCast, ViewCastInfo maxViewCast)
+    EdgeInfo FindEdge(ViewCastInfo minViewCast, ViewCastInfo maxViewCast)               //Sistema de refinamiento para encontrar la orilla del obstáculo en la proyección del mesh. 
     {
         float minAngle = minViewCast.angle;
         float maxAngle = maxViewCast.angle;
@@ -133,7 +142,9 @@ public class FieldOfView : MonoBehaviour
         {
             float angle = (minAngle + maxAngle / 2);
             ViewCastInfo newViewCast = ViewCast(angle);
-            if (newViewCast.hit == minViewCast.hit)
+            bool edgeDistanceTreshHoldExceeded = Mathf.Abs(minViewCast.distance - newViewCast.distance) > edgeDistanceTreshHold;
+
+            if (newViewCast.hit == minViewCast.hit && !edgeDistanceTreshHoldExceeded)
             {
                 minAngle = angle;
                 minPoint = newViewCast.point;
