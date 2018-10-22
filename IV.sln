@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IV", "IV.csproj", "{1050D74
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IV.Editor.Plugins", "IV.Editor.Plugins.csproj", "{7D23ADCC-21E5-6CBF-60B7-43552FC21574}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IV.Editor", "IV.Editor.csproj", "{48B97661-C35D-794B-6B42-56812D6268F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{7D23ADCC-21E5-6CBF-60B7-43552FC21574}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D23ADCC-21E5-6CBF-60B7-43552FC21574}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D23ADCC-21E5-6CBF-60B7-43552FC21574}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48B97661-C35D-794B-6B42-56812D6268F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48B97661-C35D-794B-6B42-56812D6268F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48B97661-C35D-794B-6B42-56812D6268F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48B97661-C35D-794B-6B42-56812D6268F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

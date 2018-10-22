@@ -29,6 +29,8 @@ public class DropManager : MonoBehaviour
          * Droga Y [Item 6 // Sube Daño temporalmente
          */
 
+
+
         whatToSpawn = Random.Range(1,5); //Valor Maximo no se incluye (1,3 = [1 - 2])
 
         switch (whatToSpawn)

@@ -15,7 +15,7 @@ public class ObjetoDestruible : MonoBehaviour {
     {
         if (hp == 0)
         {
-            Debug.LogError("El objeto: " + gameObject.name + "Se va a morir altiro");
+            Debug.LogError("El objeto: " + gameObject.name + "Va a morir altiro");
         }
 
         chp = hp;

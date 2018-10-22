@@ -91,6 +91,7 @@
     <Compile Include="Assets\Scripts\Enemigos\Boss\CamiLord.cs" />
     <Compile Include="Assets\Scripts\Enemigos\SemiBoss\ArduinoUno.cs" />
     <Compile Include="Assets\Scripts\Enemigos\SemiBoss\EmmaWatson.cs" />
+    <Compile Include="Assets\Scripts\FieldOfView.cs" />
     <Compile Include="Assets\Scripts\LevelManager\GameManager.cs" />
     <Compile Include="Assets\Scripts\LevelManager\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\LevelManager\SceneLoader.cs" />

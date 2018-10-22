@@ -199,7 +199,7 @@ public class PatrollingEnemies : MonoBehaviour
                     ChangeMovement(incomingObj);
                     break;
                 case "Player":
-                    EvaluatePlayerTakeDamage(incomingObj);
+                    EvaluatePlayerTakeHit(incomingObj);
                     break;
                 case "Projectile":
                     EvaluateTakeDamage(incomingObj);
@@ -227,9 +227,9 @@ public class PatrollingEnemies : MonoBehaviour
 
     }
 
-    private void EvaluatePlayerTakeDamage(GameObject incomingObj)
+    private void EvaluatePlayerTakeHit(GameObject incomingObj)
     {
-
+        
     }
 
     private void EvaluateTakeDamage(GameObject incomingObj)
