@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -22,16 +20,16 @@ public class UIManager : MonoBehaviour
 
     [Header("Interfaces")]
 
-    public GameObject mainGUI;
+    public GameObject mainGUI;              //Qué objeto es?
     public GameObject deathGUI;
     public GameObject reloadImage;
 
     [Header("Otros")]
 
-    public GameObject fuckCatFace;
+    public GameObject fuckCatFace;  
 
     #region Interfaces Estaticas :(
-    private static GameObject _mainGUI;
+    private static GameObject _mainGUI;     
     private static GameObject _deathGUI;
     private static GameObject _reloadImage;
     #endregion
@@ -39,7 +37,7 @@ public class UIManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        _mainGUI = mainGUI;
+        _mainGUI = mainGUI;     
         _deathGUI = deathGUI;
         _reloadImage = reloadImage;
 
@@ -83,7 +81,6 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
         UpdateHP();
         UpdateBullets();
     }
@@ -121,9 +118,9 @@ public class UIManager : MonoBehaviour
         _object.GetComponent<Image>().sprite = toImage;
     }
 
-    public static void ChangeStateGameObject(string xGameObject, bool estado)
+    public static void ChangeStateGameObject(string _gameObject, bool estado)
     {
-        switch (xGameObject)
+        switch (_gameObject)
         {
             case "mainGUI":
                 _mainGUI.SetActive(estado);

@@ -1,9 +1,9 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CamiLord : MonoBehaviour
 {
+    private Rigidbody2D myRbd;
     public Transform target;
     public float speed = 3f;
 
@@ -22,6 +22,7 @@ public class CamiLord : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        myRbd = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -53,8 +54,8 @@ public class CamiLord : MonoBehaviour
         if(cHP < 0)
         {
             Destroy(gameObject);
-            
         }
+
         else
         {
             if (!isRed)

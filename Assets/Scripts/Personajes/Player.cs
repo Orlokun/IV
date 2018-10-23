@@ -1,6 +1,4 @@
 ﻿//Librerías
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 //Requiriendo componente en el GameObject
@@ -29,9 +27,10 @@ public class Player : MonoBehaviour
     public Transform playerTransform;
 
     //Variables Estaticas, para llamarlas desde otros lados sin tanta cosa :D
+
     public static string weaponType;
-    public static int maxHP = 100; /* Tuve que pasarlos a float porque la wea no se dividia bien */
-    public static int cHP = 100;
+    public static int maxHP; // Tuve que pasarlos a float porque la wea no se dividia bien. Chequear en Start los Parámetros.
+    public static int cHP = maxHP;
     public static int bullets;
     public static int cbullets;
     public static int charges;
@@ -45,7 +44,6 @@ public class Player : MonoBehaviour
         pController = GetComponent<PlayerController>();
         gController = FindObjectOfType<GunController>();
         viewCamera = FindObjectOfType<Camera>();
-
 
         switch (weaponType)
         {

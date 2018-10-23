@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class DropManager : MonoBehaviour
@@ -30,6 +28,8 @@ public class DropManager : MonoBehaviour
          * Droga X [Item 5 // Sube HP
          * Droga Y [Item 6 // Sube Daño temporalmente
          */
+
+
 
         whatToSpawn = Random.Range(1,5); //Valor Maximo no se incluye (1,3 = [1 - 2])
 
