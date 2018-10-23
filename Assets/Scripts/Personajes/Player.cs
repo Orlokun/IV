@@ -17,6 +17,9 @@ public class Player : MonoBehaviour
     public Sprite Angry;
     public Sprite Hitted;
 
+    [Header("Stats")]
+    public float _HP = 100;
+
     //Variables Globales
 
     [Header("Requisitos")]
@@ -29,8 +32,8 @@ public class Player : MonoBehaviour
     //Variables Estaticas, para llamarlas desde otros lados sin tanta cosa :D
 
     public static string weaponType;
-    public static int maxHP; // Tuve que pasarlos a float porque la wea no se dividia bien. Chequear en Start los Parámetros.
-    public static int cHP = maxHP;
+    public static float maxHP; // Tuve que pasarlos a float porque la wea no se dividia bien. Chequear en Start los Parámetros.
+    public static float cHP = maxHP;
     public static int bullets;
     public static int cbullets;
     public static int charges;
@@ -38,6 +41,14 @@ public class Player : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+
+        maxHP = _HP;
+        cHP = maxHP;
+
+        if(_HP <= 0)
+        {
+            Debug.LogError("FUCK CAT INICIARA SIN VIDA, ESTO TRIGGEARA EL DEATH (VARIABLE _HP)");
+        }
 
         weaponType = "Minigun";
 
