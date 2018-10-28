@@ -88,8 +88,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\PatrollingEnemies.cs" />
     <Compile Include="Assets\Scripts\Enemigos\Boss\CamiLord.cs" />
+    <Compile Include="Assets\Scripts\Enemigos\PatrollingEnemies.cs" />
     <Compile Include="Assets\Scripts\Enemigos\SemiBoss\ArduinoUno.cs" />
     <Compile Include="Assets\Scripts\Enemigos\SemiBoss\EmmaWatson.cs" />
     <Compile Include="Assets\Scripts\FieldOfView.cs" />
@@ -97,15 +97,18 @@
     <Compile Include="Assets\Scripts\LevelManager\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\LevelManager\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\Others\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\Others\DoorSystem.cs" />
     <Compile Include="Assets\Scripts\Others\DropManager.cs" />
     <Compile Include="Assets\Scripts\Others\Item.cs" />
     <Compile Include="Assets\Scripts\Others\ObjetoDestruible.cs" />
+    <Compile Include="Assets\Scripts\Others\RadioManager.cs" />
     <Compile Include="Assets\Scripts\Personajes\CameraController.cs" />
     <Compile Include="Assets\Scripts\Personajes\Gun.cs" />
     <Compile Include="Assets\Scripts\Personajes\GunController.cs" />
     <Compile Include="Assets\Scripts\Personajes\Player.cs" />
     <Compile Include="Assets\Scripts\Personajes\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Personajes\Projectile.cs" />
+    <Compile Include="Assets\Scripts\UIManager\ScrollingText.cs" />
     <Compile Include="Assets\Scripts\UIManager\UIManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />

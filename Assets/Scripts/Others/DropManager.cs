@@ -25,13 +25,16 @@ public class DropManager : MonoBehaviour
          * Minigun [Arma 2
          * X [Arma 3
          * Ammo [Item 4
-         * Droga X [Item 5 // Sube HP
-         * Droga Y [Item 6 // Sube Daño temporalmente
+         * CAFE [Item 5 // Sube HP
+         * BOLSA CAFE [Item 6 // Max HP
+         * Money [Item 7 //Money
+         * 
          */
 
 
 
         whatToSpawn = Random.Range(1,5); //Valor Maximo no se incluye (1,3 = [1 - 2])
+        //HAY QUE HACER UN SISTEMA DE %
 
         switch (whatToSpawn)
         {
