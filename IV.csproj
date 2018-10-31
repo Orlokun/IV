@@ -99,6 +99,7 @@
     <Compile Include="Assets\Scripts\Others\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Others\DoorSystem.cs" />
     <Compile Include="Assets\Scripts\Others\DropManager.cs" />
+    <Compile Include="Assets\Scripts\Others\Enemigo.cs" />
     <Compile Include="Assets\Scripts\Others\Item.cs" />
     <Compile Include="Assets\Scripts\Others\ObjetoDestruible.cs" />
     <Compile Include="Assets\Scripts\Others\RadioManager.cs" />

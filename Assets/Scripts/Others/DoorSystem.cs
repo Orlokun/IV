@@ -5,34 +5,30 @@ using UnityEngine;
 public class DoorSystem : MonoBehaviour
 {
 
-    public List<GameObject> doors;
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		switch(Player.kEnemies)
-        {
-            case 5:
-                OpenDoor(1);
-                break;
-            case 10:
-                OpenDoor(2);
-                break;
-            case 15:
-                OpenDoor(3);
-                break;
-            default:
-                break;
-        }
-	}
+    public bool puertaSimple;
 
-    void OpenDoor(int doorID)
+    public static void OpenDoor(int doorID)
     {
+        //Pseudo codigo
+        //Animation.open(doors[doorID]);
 
+        Destroy(GameManager._doors[doorID]);
     }
 
     void CloseDoor(int doorID)
     {
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (puertaSimple)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+
+        }
     }
 }
