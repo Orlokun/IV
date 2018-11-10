@@ -17,6 +17,11 @@ public class Player : MonoBehaviour
     public Sprite Angry;
     public Sprite Hitted;
 
+    [Header("Stats")]
+    public float _HP = 100;
+    public float _money;
+    public int _kEnemies;
+
     //Variables Globales
 
     [Header("Requisitos")]
@@ -29,15 +34,29 @@ public class Player : MonoBehaviour
     //Variables Estaticas, para llamarlas desde otros lados sin tanta cosa :D
 
     public static string weaponType;
-    public static int maxHP; // Tuve que pasarlos a float porque la wea no se dividia bien. Chequear en Start los Parámetros.
-    public static int cHP = maxHP;
+    public static float maxHP; // Tuve que pasarlos a float porque la wea no se dividia bien. Chequear en Start los Parámetros.
+    public static float cHP = maxHP;
     public static int bullets;
     public static int cbullets;
     public static int charges;
+    public static int kEnemies;
+
+    public static float cMoney;
 
     // Use this for initialization
     void Start()
     {
+
+        maxHP = _HP;
+        cHP = maxHP;
+
+        cMoney = _money;
+        kEnemies = _kEnemies;
+
+        if(_HP <= 0)
+        {
+            Debug.LogError("FUCK CAT INICIARA SIN VIDA, ESTO TRIGGEARA EL DEATH (VARIABLE _HP)");
+        }
 
         weaponType = "Minigun";
 
@@ -52,10 +71,17 @@ public class Player : MonoBehaviour
                 cbullets = bullets;
                 charges = 2; // 4 cargadores
                 break;
+
             case "Minigun":
                 bullets = 60;
                 cbullets = bullets;
                 charges = 10; // 4 cargadores
+                break;
+
+            case "Canion":
+                bullets = 5;
+                cbullets = bullets;
+                charges = 1; //1 Cargador
                 break;
 
             default:
@@ -198,13 +224,25 @@ public class Player : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Ammo":
-                Item.pickUpItem("Ammo", collision.gameObject);
+                Item.PickUpItem("Ammo", collision.gameObject);
                 break;
             case "Blaster":
-                Item.pickUpItem("Blaster", collision.gameObject);
+                Item.PickUpItem("Blaster", collision.gameObject);
                 break;
             case "Minigun":
-                Item.pickUpItem("Minigun", collision.gameObject);
+                Item.PickUpItem("Minigun", collision.gameObject);
+                break;
+            case "Canion":
+                Item.PickUpItem("Canion", collision.gameObject);
+                break;
+            case "Money":
+                Item.PickUpItem("Money", collision.gameObject); //DEBE SEGUIR AL JUGADOR EN UN AREA
+                break;
+            case "Cafe":
+                Item.PickUpItem("Cafe", collision.gameObject);
+                break;
+            case "":
+                Item.PickUpItem("BolsaCafe", collision.gameObject);
                 break;
             default:
                 break;
