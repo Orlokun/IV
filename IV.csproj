@@ -90,8 +90,6 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Enemigos\Boss\CamiLord.cs" />
     <Compile Include="Assets\Scripts\Enemigos\PatrollingEnemies.cs" />
-    <Compile Include="Assets\Scripts\Enemigos\SemiBoss\ArduinoUno.cs" />
-    <Compile Include="Assets\Scripts\Enemigos\SemiBoss\EmmaWatson.cs" />
     <Compile Include="Assets\Scripts\FieldOfView.cs" />
     <Compile Include="Assets\Scripts\LevelManager\GameManager.cs" />
     <Compile Include="Assets\Scripts\LevelManager\PauseMenu.cs" />
@@ -111,6 +109,8 @@
     <Compile Include="Assets\Scripts\Personajes\Projectile.cs" />
     <Compile Include="Assets\Scripts\UIManager\ScrollingText.cs" />
     <Compile Include="Assets\Scripts\UIManager\UIManager.cs" />
+    <Compile Include="Assets\Sprites\SemiBoss\ArduinoUno.cs" />
+    <Compile Include="Assets\Sprites\SemiBoss\EmmaWatson.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
