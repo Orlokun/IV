@@ -17,6 +17,7 @@ public class CamiLord : MonoBehaviour
     public Sprite camilord_Normal;
     public Sprite camilord_Angry;
     public Sprite camilord_Normal_Hitted;
+    public Sprite camilord_OpenMouth;
 
 
     // Use this for initialization
@@ -34,8 +35,10 @@ public class CamiLord : MonoBehaviour
 
 
         //move towards the player
-        if (Vector3.Distance(transform.position, target.position) > 1f)
+        if (Vector3.Distance(transform.position, target.position) > 1f && Vector3.Distance(transform.position, target.position) < 15f)
         {//move if distance from target is greater than 1
+            AnimationSwitch(camilord_OpenMouth);
+            ShootPlayer(target.position);
             transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
         }
 
@@ -84,6 +87,61 @@ public class CamiLord : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    private void ShootPlayer(Vector2 targetPlayer)
+    {
+        System.Random newRandom = new System.Random();
+        int piezaDeAjedrez = 10;
+        InstanciarPieza(piezaDeAjedrez);
+    }
+
+    private void InstanciarPieza(int pieza)
+    {
+        switch (pieza)
+        {
+            case 1:
+                GameObject projectile = (GameObject)Instantiate(Resources.Load("ChessPiece/" + "pieza_" + pieza.ToString()));
+                break;
+            case 2:
+                GameObject projectile1 = (GameObject)Instantiate(Resources.Load("ChessPiece/" + "pieza_" + pieza.ToString()));
+                break;
+            case 3:
+                GameObject projectile2 = (GameObject)Instantiate(Resources.Load("ChessPiece/" + "pieza_" + pieza.ToString()));
+                break;
+            case 4:
+                GameObject projectile3 = (GameObject)Instantiate(Resources.Load("ChessPiece/" + pieza.ToString()));
+                break;
+            case 5:
+                GameObject projectile4 = (GameObject)Instantiate(Resources.Load("ChessPiece/" + "pieza_" + pieza.ToString()));
+                break;
+            case 6:
+                GameObject projectile5 = (GameObject)Instantiate(Resources.Load("ChessPiece/" + "pieza_" + pieza.ToString()));
+                break;
+            case 7:
+                GameObject projectile6 = (GameObject)Instantiate(Resources.Load("ChessPiece/" + "pieza_" + pieza.ToString()));
+                break;
+            case 8:
+                GameObject projectile7 = (GameObject)Instantiate(Resources.Load("ChessPiece/" + "pieza_" + pieza.ToString()));
+                break;
+            case 9:
+                GameObject projectile8 = (GameObject)Instantiate(Resources.Load("ChessPiece/" + "pieza_" + pieza.ToString()));
+                break;
+            case 10:
+                GameObject projectile9 = (GameObject)Instantiate(Resources.Load("ChessPiece/" + "pieza_" + pieza.ToString()));
+                Debug.Log("El objeto a instaciar es este: pieza " + pieza.ToString());
+                break;
+            case 11:
+                GameObject projectile10 = (GameObject)Instantiate(Resources.Load("ChessPiece/" + "pieza_" + pieza.ToString()));
+                break;
+            case 12:
+                GameObject projectile11 = (GameObject)Instantiate(Resources.Load("ChessPiece/" + "pieza_" + pieza.ToString()));
+                break;
+        }
+    }
+    private void AnimationSwitch(Sprite incomingSprite)
+    {
+        isSprite = incomingSprite;
     }
 
     private void OnGUI()

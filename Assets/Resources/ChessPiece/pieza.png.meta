@@ -1,0 +1,272 @@
+fileFormatVersion: 2
+guid: 5e0656112a13af24fb3f3a6a9debc491
+timeCreated: 1541783768
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 2000px-Chess_Pieces_Sprite.svg_0
+    21300002: 2000px-Chess_Pieces_Sprite.svg_1
+    21300004: 2000px-Chess_Pieces_Sprite.svg_2
+    21300006: 2000px-Chess_Pieces_Sprite.svg_3
+    21300008: 2000px-Chess_Pieces_Sprite.svg_4
+    21300010: 2000px-Chess_Pieces_Sprite.svg_5
+    21300012: 2000px-Chess_Pieces_Sprite.svg_6
+    21300014: 2000px-Chess_Pieces_Sprite.svg_7
+    21300016: 2000px-Chess_Pieces_Sprite.svg_8
+    21300018: 2000px-Chess_Pieces_Sprite.svg_9
+    21300020: 2000px-Chess_Pieces_Sprite.svg_10
+    21300022: 2000px-Chess_Pieces_Sprite.svg_11
+    21300024: pieza_0
+    21300026: pieza_1
+    21300028: pieza_2
+    21300030: pieza_3
+    21300032: pieza_4
+    21300034: pieza_5
+    21300036: pieza_6
+    21300038: pieza_7
+    21300040: pieza_8
+    21300042: pieza_9
+    21300044: pieza_10
+    21300046: pieza_11
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pieza_0
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 367
+        width: 259
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: pieza_1
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 370
+        width: 286
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: pieza_2
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 373
+        width: 257
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: pieza_3
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 372
+        width: 250
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: pieza_4
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 372
+        width: 212
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: pieza_5
+      rect:
+        serializedVersion: 2
+        x: 1738
+        y: 368
+        width: 183
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: pieza_6
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 34
+        width: 259
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: pieza_7
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 28
+        width: 286
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: pieza_8
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 40
+        width: 257
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: pieza_9
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 38
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: pieza_10
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 38
+        width: 212
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: pieza_11
+      rect:
+        serializedVersion: 2
+        x: 1738
+        y: 35
+        width: 183
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
